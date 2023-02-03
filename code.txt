@@ -1,0 +1,31 @@
+
+gmail:
+
+Name: 			Alisher
+Surname: 		Uzakov
+			24.06.1996
+gmail: 			AlisherUzakov2406@gmail.com
+password: 		NS24030604*+*
+phone number: 		+998 94 648 83 34
+
+Git hub:
+
+gmail:			AlisherUzakov2406@gmail.com
+password:		Nur24030604!@#
+username:		KhurramovNurislom
+
+
+
+/***  Home work 03.02.2023 ****/
+
+Students
+Employees
+Cars 
+craete difficult objects
+
+
+
+
+
+
+
