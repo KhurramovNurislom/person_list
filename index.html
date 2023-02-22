@@ -5,69 +5,179 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial</title>
+    <title>Person_List</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Java Scriptda ob'ektlar bilan ishlash</h1>
-    <hr>
-    <div id="myDiv">
-
-        <form name="myForm">
-
-            <label for="izlash">Ism bo'yicha izlash:</label>
-            <input class="form-control" type="text" id="Izlash"><br>
-            <button type="button" id="btnIzlash">Izlash</button><br><br>
+<br>
+ 
 
 
-            <label for="ismi">ismi: </label>
-            <input class="form-control" type="text" id="ismi"><br><br>
 
-            <label for="familiyasi">familiyasi: </label>
-            <input class="form-control" type="text" name="" id="familiyasi"><br><br>
+<div id="myDiv">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Ismi</th>
+                        <th>Familiyasi</th>
+                        <th>Sharifi</th>
+                        <th>Tug'ilgan sanasi</th>
+                        <th>Telefon raqami</th>
+                        <th>Unvoni</th>
+                        <th>Lavozimi</th>
+                        <th>Manzili</th>
+                    </tr>
 
-            <label for="sharifi">sharifi:</label>
-            <input class="form-control" type="text" id="sharifi"><br><br>
+                </thead>
+                <tbody id="mytable">
 
-            <label for="tugilgan_sanasi">tug'ilgan sanasi:</label>
-            <input class="form-control" type="text" id="tugilgan_sanasi"><br><br>
-
-            <label for="unvoni">unvoni:</label>
-            <input class="form-control" type="text" id="unvoni"><br><br>
-
-            <label for="lavozimi">lavozimi:</label>
-            <input class="form-control" type="text" id="lavozimi"><br><br>
-
-            <label for="tel_nomeri">telefon raqami:</label>
-            <input class="form-control" type="text" id="tel_nomeri"><br><br>
-
-            <hr>
-            <label for="tel_nomeri">Manzili:</label><br><br>
-
-            <label for="viloyati">viloyati:</label>
-            <input class="form-control" type="text" id="viloyati"><br><br>
-
-            <label for="tumani">tumani:</label>
-            <input class="form-control" type="text" id="tumani"><br><br>
-
-            <label for="mahallasi">mahallasi:</label>
-            <input class="form-control" type="text" id="mahallasi"><br><br>
-
-            <label for="uyi">uyi:</label>
-            <input class="form-control" type="text" id="uyi"><br><br>
-
-
-            <button type="button" id="btnAdd">Add</button>
-            <button type="button" id="btnDelete">Delete</button>
-            <button type="button" id="btnEdit">Edit</button>
-            <button type="button" id="btnShow">Show</button>
-
-        </form>
-
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-primary" onclick="addNew()" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Qo'shish
+            </button>
+        </div>
     </div>
-    <script src="./main.js"></script>
+</div>
 
+<div class="row">
+    <div class="col">
+        <div class="d-flex justify-content-center">
+            <ul class="pagination">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+    <div id="myDiv2 container">
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Xodim ma'lumotlari</h5>
+                       
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-header">
+                                Ma'lumotlarni to'ldiring
+                            </div>
+                            <div class="card-body">
+                                <form name="myForm">
+                                    <input name="personId" type="hidden">
+                                    
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <label for="ism" class="form-label"> Ismi: </label>
+                                            <input class="form-control" type="text" name="ism" value="">
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="familiya" class="form-label"> Familiyasi:</label>
+                                            <input class="form-control" type="text" name="familiya">
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="sharif" class="form-label"> Sharifi:</label>
+                                            <input class="form-control" type="text" name="sharif">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <label for="tsana" class="form-label"> Tug'ilgan sanasi:</label>
+                                            <input class="form-control" type="date" name="tsana">
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="traqam" class="form-label"> Telefon raqami:</label>
+                                            <input class="form-control" type="text" name="traqam">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <label for="unvonId" class="form-label"> Unvoni: </label>
+                                            <select class="form-control" name="unvonId" id="unvonId">
+                                            </select>
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="lavozim" class="form-label"> Lavozimi: </label>
+                                            <input class="form-control" type="text" name="lavozim">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row">
+
+                                        <label class="form-label"> Manzili:</label>
+
+                                        <div class="col">
+                                            <label for="viloyatId" class="form-label"> Viloyati: </label>
+                                            <select class="form-control" name="viloyatId" id="viloyatId">
+                                            </select>
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="tumanId" class="form-label"> Tumani: </label>
+                                            <select class="form-control" name="tumanId" id="tumanId">
+                                            </select>
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="uy" class="form-label"> Uyi: </label>
+                                            <input class="form-control" type="text" name="uy">
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                        <button type="button" class="btn btn-primary" id="btnSaqlash">Saqlash</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./main.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
