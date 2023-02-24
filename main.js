@@ -385,6 +385,8 @@ function save() {
 //     clear();
 //     openModal();
 // }
+
+
 // function deleteItem(id) {
 //     const item = persons.find(a => a.id === id);
 //     const index = persons.indexOf(item);
@@ -392,6 +394,8 @@ function save() {
 //     saveToLocale();
 //     loadTable();
 // }
+
+
 // function selectRow(e) {
 //     console.log(e)
 //     const tr = document.getElementById('tr_' + e);
@@ -402,6 +406,8 @@ function save() {
 //     tr.classList.add('person-row-selected');
 
 // }
+
+
 // function addRow(item, index) {
 //     return ` <tr id='tr_${index}'  onclick="selectRow(${index})">
 //     <td>${index}</td>
